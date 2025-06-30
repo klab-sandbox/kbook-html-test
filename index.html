@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KBook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.5.1/github-markdown-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <nav id="sidebar">
+      <h2>📘 KBook</h2>
+      <div id="toc">
+        
+        <h3><b><a href="#" onclick="showSubChapters('chapter_1', 'Bootrepair')">1. Bootrepair</a></b></h3>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('bootrepair/recover_ubuntu_bootloader.md')">1.1. Recover Ubuntu Bootloader</a></div>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('bootrepair/recover_windows_bootloader.md')">1.2. Recover Windows Bootloader</a></div>
+
+        <h3><b><a href="#" onclick="showSubChapters('chapter_2', 'Chroot')">2. Chroot</a></b></h3>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('chroot/install_source_to_chroot.md')">2.1. Install Source To Chroot</a></div>
+
+        <h3><b><a href="#" onclick="showSubChapters('chapter_3', 'Codebrowser')">3. Codebrowser</a></b></h3>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('codebrowser/doxygen.cfg')">3.1. Doxygen</a></div>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('codebrowser/setup_codebrowser.md')">3.2. Setup Codebrowser</a></div>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('codebrowser/setup_gnu_gtags.md')">3.3. Setup Gnu Gtags</a></div>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('codebrowser/setup_opengrok.md')">3.4. Setup Opengrok</a></div>
+
+        <h3><b><a href="#" onclick="showSubChapters('chapter_4', 'Coverage')">4. Coverage</a></b></h3>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('coverage/Makefile')">4.1. Makefile</a></div>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('coverage/gcov.md')">4.2. Gcov</a></div>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('coverage/gcovr.md')">4.3. Gcovr</a></div>
+
+        <h3><b><a href="#" onclick="showSubChapters('chapter_5', 'Desktops')">5. Desktops</a></b></h3>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('desktops/setup_ubuntu_desktops.md')">5.1. Setup Ubuntu Desktops</a></div>
+
+        <h3><b><a href="#" onclick="showSubChapters('chapter_6', 'Docker')">6. Docker</a></b></h3>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('docker/multi-arch-image.md')">6.1. Multi Arch Image</a></div>
+
+        <h3><b><a href="#" onclick="showSubChapters('chapter_7', 'Gitweb')">7. Gitweb</a></b></h3>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('gitweb/cgitrc')">7.1. Cgitrc</a></div>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('gitweb/gitweb_projects.list')">7.2. Gitweb Projects</a></div>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('gitweb/setup_cgit.md')">7.3. Setup Cgit</a></div>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('gitweb/setup_gitweb.md')">7.4. Setup Gitweb</a></div>
+
+        <h3><b><a href="#" onclick="showSubChapters('chapter_8', 'Openwrt')">8. Openwrt</a></b></h3>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('openwrt/OpenWrt.md')">8.1. Openwrt</a></div>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('openwrt/PrplWrt.md')">8.2. Prplwrt</a></div>
+
+        <h3><b><a href="#" onclick="showSubChapters('chapter_9', 'Redmine')">9. Redmine</a></b></h3>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('redmine/install_redmine_with_sqlite3.md')">9.1. Install Redmine With Sqlite3</a></div>
+
+        <h3><b><a href="#" onclick="showSubChapters('chapter_10', 'Whatsapp')">10. Whatsapp</a></b></h3>
+        <div style="margin-left:1em;"><a href="#" onclick="loadMarkdown('whatsapp/Decrypting_WhatsApp_Database.md')">10.1. Decrypting Whatsapp Database</a></div>
+
+<script>
+window.chapterMap = {
+  "chapter_1": [
+    { index: "1.1", title: "Recover Ubuntu Bootloader", path: "bootrepair/recover_ubuntu_bootloader.md" },
+    { index: "1.2", title: "Recover Windows Bootloader", path: "bootrepair/recover_windows_bootloader.md" },
+  ],
+  "chapter_2": [
+    { index: "2.1", title: "Install Source To Chroot", path: "chroot/install_source_to_chroot.md" },
+  ],
+  "chapter_3": [
+    { index: "3.1", title: "Doxygen", path: "codebrowser/doxygen.cfg" },
+    { index: "3.2", title: "Setup Codebrowser", path: "codebrowser/setup_codebrowser.md" },
+    { index: "3.3", title: "Setup Gnu Gtags", path: "codebrowser/setup_gnu_gtags.md" },
+    { index: "3.4", title: "Setup Opengrok", path: "codebrowser/setup_opengrok.md" },
+  ],
+  "chapter_4": [
+    { index: "4.1", title: "Makefile", path: "coverage/Makefile" },
+    { index: "4.2", title: "Gcov", path: "coverage/gcov.md" },
+    { index: "4.3", title: "Gcovr", path: "coverage/gcovr.md" },
+  ],
+  "chapter_5": [
+    { index: "5.1", title: "Setup Ubuntu Desktops", path: "desktops/setup_ubuntu_desktops.md" },
+  ],
+  "chapter_6": [
+    { index: "6.1", title: "Multi Arch Image", path: "docker/multi-arch-image.md" },
+  ],
+  "chapter_7": [
+    { index: "7.1", title: "Cgitrc", path: "gitweb/cgitrc" },
+    { index: "7.2", title: "Gitweb Projects", path: "gitweb/gitweb_projects.list" },
+    { index: "7.3", title: "Setup Cgit", path: "gitweb/setup_cgit.md" },
+    { index: "7.4", title: "Setup Gitweb", path: "gitweb/setup_gitweb.md" },
+  ],
+  "chapter_8": [
+    { index: "8.1", title: "Openwrt", path: "openwrt/OpenWrt.md" },
+    { index: "8.2", title: "Prplwrt", path: "openwrt/PrplWrt.md" },
+  ],
+  "chapter_9": [
+    { index: "9.1", title: "Install Redmine With Sqlite3", path: "redmine/install_redmine_with_sqlite3.md" },
+  ],
+  "chapter_10": [
+    { index: "10.1", title: "Decrypting Whatsapp Database", path: "whatsapp/Decrypting_WhatsApp_Database.md" },
+  ],
+};
+</script>
+      </div>
+    </nav>
+    <main id="content" class="markdown-body">
+      <h2>Welcome</h2>
+      <p>Select a chapter to begin reading.</p>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+    function showSubChapters(chapterId, chapterTitle) {
+      const subchapters = window.chapterMap?.[chapterId];
+      const content = document.getElementById("content");
+
+      if (!subchapters || subchapters.length === 0) {
+        content.innerHTML = `<h2>${chapterTitle}</h2><p>No subchapters found.</p>`;
+        return;
+      }
+
+      let html = `<h2>${chapterTitle}</h2><ul>`;
+      for (const item of subchapters) {
+        html += `<li><a href="#" onclick="loadMarkdown('${item.path}')">${item.index}. ${item.title}</a></li>`;
+      }
+      html += "</ul>";
+      content.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
